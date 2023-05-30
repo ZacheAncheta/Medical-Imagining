@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body id="bodyd">
+    <center>
+<div class="theform" id="theForm" class="theForm">
+<form onsubmit="welcome()">
+<label for="username" style="color: white;">What's your name?</label><br><br>
+<input type="text" id="username" name="username"><br>
+<label for="answer" style="color: white;">What would you do to check if your body has cancer?</label><br><br>
+<input type="text" id="answer" name="answer">
+<br><br><br>
+<input type="submit" class="enter">
+</form>
+</div>
+<br><br>
+<div id="nextb" class="hide">
+<button><a href="Medical Imaging.html" style="text-decoration: none; color: orangered;" >Proceed</a></button>
+</div></center>
+</body>
+</html>
+
+<script>
+function welcome(){
+    var x = document.getElementById("username").value;
+    var y = document.getElementById("answer").value;
+document.getElementById("theForm").innerHTML= "To " + y + " might work, but Radiology(or Medical Imaging) gives you a more effective and accurate way to check " + x + "'s body for cancer. <br><br> Click Proceed for more info on Radiology";
+
+document.getElementById("nextb").className="show";
+document.getElementById("bodyd").className="backgroundd";
+return false;
+}
+</script>
+
+<style>
+    *{
+        font-family: monospace;
+        font-size: 30px;
+        color: white;
+    }
+    body{
+        background-color: coral;
+    }
+    .submit{
+        background-color:orangered;
+    }
+    .theform{
+    margin-top: 3cm;
+    
+    }
+    .show{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
+    #username, #answer{
+        background-color: rgb(58, 51, 41);
+    }
+    .backgroundd{
+        background-image: url("Images/koers-analyse.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
